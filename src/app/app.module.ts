@@ -8,7 +8,7 @@ import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     HttpClientModule,

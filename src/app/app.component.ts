@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     this.posts$ = this.getRestItems$();
   }
 
-  // Read all REST Items
+  // Recupera todos los POSTS
   getRestItems$(): Observable<SafePost[]> {
     return this.appService.getAll()
       .pipe(posts => posts);

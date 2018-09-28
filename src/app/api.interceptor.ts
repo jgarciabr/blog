@@ -16,7 +16,6 @@ export class ApiInterceptor implements HttpInterceptor {
     request: HttpRequest,
     next: HttpHandler
   ): Observable<HttpEvent> {
-    console.log('ApiInterceptor was called');
 
     const clonedRequest = request.clone({
       headers: request.headers.set('Content-Type', 'XXXX')
@@ -30,4 +29,3 @@ export class ApiInterceptor implements HttpInterceptor {
     }));
     }
 }
-

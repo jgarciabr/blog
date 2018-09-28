@@ -1,0 +1,30 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+h1{
+  text-align: center;
+}
+.menu {
+  background-color: #efeaea;
+}
+
+li {
+  text-decoration: underline;
+  color: #17175f;
+  cursor: pointer;
+}
+
+ul {
+  list-style: arabic-indic;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  margin-top: 20px;
+  background-color: #eff1d5;
+}
+
+.contenedor h1 {
+  font-size: 25px;
+}

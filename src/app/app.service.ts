@@ -8,14 +8,14 @@ import { SafePost } from './safe-post.interface';
 @Injectable()
 export class AppService{
 
-  protected url : string = 'https://public-api.wordpress.com/rest/v1.1/sites/vocon-it.com/posts';
+  protected url : string = 'http://pelotacharra.com/wp-json/wp/v2/posts';
 
   constructor(private http: HttpClient, public sanitizer: DomSanitizer) {}
 
   safePost(apiDataSinglePost: APIDataSinglePost): SafePost  {
     return {
-      'title': this.sanitizer.bypassSecurityTrustHtml(apiDataSinglePost.title),
-      'content': this.sanitizer.bypassSecurityTrustHtml(apiDataSinglePost.content)
+      'title': this.sanitizer.bypassSecurityTrustHtml(apiDataSinglePost.title.rendered),
+      'content': this.sanitizer.bypassSecurityTrustHtml(apiDataSinglePost.content.rendered)
     };
   }
 
